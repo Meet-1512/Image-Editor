@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Editor</title>
+    <link rel="stylesheet" href="/CSS/Photo_Editor.css" />
+  </head>
+  <body>
+    <h1 align="center">Photo Editor</h1>
+
+    <!-- Main Division That Contain Two Main Division -->
+    <div class="webpage">
+      <!-- Division That Contain Photo -->
+      <div class="photo">
+        <!-- Division For Insert Image -->
+        <div class="insert_image">
+          <img src="" />
+        </div>
+
+        <div class="choose_image">
+          <button>Choose Image</button>
+          <input type="file" name="" id="" accept="image/*" hidden />
+        </div>
+      </div>
+
+      <!-- Division That Contain Tools -->
+      <div class="tools">
+        <!-- Slider -->
+        <div class="slider">
+          <div class="filter_info">
+            <b class="name">Brightness</b>
+            <b class="value">100%</b>
+          </div>
+          <input type="range" name="" id="" max="200" min="0" />
+        </div>
+
+        <!-- Filter Icon -->
+        <div class="filter_icon">
+          <p><b>Filter</b></p>
+          <div class="filter_icon_buttons">
+            <button title="Brightness" id="Brightness" class="active">
+              <img src="/Photo/brightness.png" alt="Brightness" />
+            </button>
+            <button title="Contrast" id="Contrast">
+              <img src="/Photo/contrast.png" alt="Contrast" />
+            </button>
+            <button title="Saturation" id="Saturation">
+              <img src="/Photo/saturation.png" alt="Saturation" />
+            </button>
+            <button title="Blur" id="Blur">
+              <img src="/Photo/blur.png" alt="Blur" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Alignment Icon -->
+        <div class="alignment_icon">
+          <p><b>Rotate & Flip</b></p>
+          <div class="alignment_icon_buttons">
+            <button title="Rotate_Right" id="Rotate_Right">
+              <img src="/Photo/rotate.png" alt="" />
+            </button>
+            <button title="Flip_X" id="Flip_X">
+              <img src="/Photo/mirror-L-R.png" alt="" />
+            </button>
+            <button title="Flip_Y" id="Flip_Y">
+              <img src="/Photo/mirror-T-B.png" alt="" />
+            </button>
+            <!-- <button><img src="/Photo/" alt=""></button> -->
+          </div>
+        </div>
+
+        <!-- Add these elements to your existing HTML -->
+        <div class="Cropper">
+          <div class="crop_resize">
+            <button class="crop">Crop</button>
+            <button class="resize">Resize</button>
+          </div>
+
+          <div class="crop_resize_options" style="display: none">
+            <input type="number" id="crop_x" placeholder="X Coordinate" />
+            <input type="number" id="crop_y" placeholder="Y Coordinate" />
+            <input type="number" id="crop_width" placeholder="Width" />
+            <input type="number" id="crop_height" placeholder="Height" />
+            <button class="apply_crop">Apply Crop</button>
+          </div>
+        </div>
+
+        <div class="reset_save">
+          <button class="reset">Reset</button>
+          <button class="save">Save Image</button>
+        </div>
+      </div>
+    </div>
+    <script src="/JS/Photo_Editor.js"></script>
+  </body>
+</html>
